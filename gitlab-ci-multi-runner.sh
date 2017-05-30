@@ -15,5 +15,6 @@ sudo gitlab-ci-multi-runner register \
   --url "https://gitlab.asynchrony.com/ci" \
   --registration-token "$regToken" \
   --description "$runnerDesc" \
+  --env "DB_HOME=$DB_HOME" \
   --executor "docker" \
   --docker-image ruby:2.3.4
