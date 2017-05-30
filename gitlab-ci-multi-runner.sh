@@ -1,5 +1,6 @@
 #!/bin/bash
 
+.
 . /usr/local/osmosix/service/utils/cfgutil.sh
 
 exec > >(tee -a /usr/local/osmosix/logs/service.log) 2>&1
@@ -15,6 +16,6 @@ sudo gitlab-ci-multi-runner register \
   --url "https://gitlab.asynchrony.com/ci" \
   --registration-token "$regToken" \
   --description "$runnerDesc" \
-  --env "DB_HOME=$DB_HOME" \
+  --env "DB_HOME=$CliqrTier_Database_IP" \
   --executor "docker" \
   --docker-image ruby:2.3.4
