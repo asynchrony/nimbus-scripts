@@ -1,6 +1,6 @@
 #!/bin/bash
 
-.
+. /usr/local/osmosix/etc/userenv
 . /usr/local/osmosix/service/utils/cfgutil.sh
 
 exec > >(tee -a /usr/local/osmosix/logs/service.log) 2>&1
