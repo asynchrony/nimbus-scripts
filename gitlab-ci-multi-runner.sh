@@ -15,4 +15,5 @@ sudo gitlab-ci-multi-runner register \
   --description "$runnerDesc" \
   --env "DB_HOST=$CliqrTier_Database_IP" \
   --executor "docker" \
-  --docker-image ruby:2.3.4
+  --docker-image ruby:2.3.4 \
+  --docker-volumes /var/run/docker.sock:/var/run/docker.sock
