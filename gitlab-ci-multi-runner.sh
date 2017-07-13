@@ -16,4 +16,5 @@ sudo gitlab-ci-multi-runner register \
   --env "DB_HOST=$CliqrTier_Database_IP" \
   --executor "docker" \
   --docker-image ruby:2.3.4 \
-  --docker-volumes /var/run/docker.sock:/var/run/docker.sock
+  --docker-volumes /var/run/docker.sock:/var/run/docker.sock \
+  --docker-pull-policy "if-not-present"
